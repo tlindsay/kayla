@@ -49,6 +49,10 @@ Padrino.dependency_paths.unshift Padrino.root('config/initializers/*.rb')
 # These hooks are run before any dependencies are required.
 #
 Padrino.before_load do
+  ActiveRecord::Base.send(:include, Paperclip::Glue)
+  File.send(:include, Paperclip::Upfile)
+
+  Paperclip.options[:logger] = Padrino.logger
 end
 
 ##
