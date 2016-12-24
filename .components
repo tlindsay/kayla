@@ -1,0 +1,10 @@
+---
+:orm: activerecord
+:test: none
+:mock: none
+:script: none
+:renderer: slim
+:stylesheet: scss
+:namespace: Kayla
+:migration_format: number
+:admin_renderer: slim
